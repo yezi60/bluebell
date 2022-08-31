@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2248e2f9-07b7-4532-9e3d-26766e03cafa" name="ubuntu">
+        <fileTransfer rootFolder="/home/yezi/project" accessType="SFTP" host="219.228.135.242" port="22" sshConfigId="f39050c3-37d9-4f36-9d16-c6b2b5ac8a16" sshConfig="root@219.228.135.242:22 password">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

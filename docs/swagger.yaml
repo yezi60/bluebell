@@ -1,0 +1,69 @@
+basePath: /api/v1
+definitions:
+  controllers._ParamPostList:
+    properties:
+      community_id:
+        description: 可以为空
+        type: integer
+      order:
+        description: 排序依据
+        example: score
+        type: string
+      page:
+        description: 页码
+        type: integer
+      size:
+        description: 每页的数据量
+        type: integer
+    type: object
+host: 127.0.0.1:8081
+info:
+  contact:
+    email: yezidexiatian60@sina.com
+    name: 这里写联系人信息
+    url: https://soleaf.xyz
+  description: 博客论坛
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: bluebell
+  version: "1.0"
+paths:
+  /posts2:
+    get:
+      consumes:
+      - application/json
+      description: 可按社区按时间或分数排序查询帖子列表接口
+      parameters:
+      - description: Bearer JWT
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: 可以为空
+        in: query
+        name: community_id
+        type: integer
+      - in: query
+        name: order
+        type: string
+      - in: query
+        name: page
+        type: integer
+      - in: query
+        name: size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controllers._ParamPostList'
+      security:
+      - ApiKeyAuth: []
+      summary: 升级版帖子列表接口
+      tags:
+      - 帖子相关接口(分组)
+swagger: "2.0"
